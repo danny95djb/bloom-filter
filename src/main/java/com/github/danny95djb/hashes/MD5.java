@@ -2,7 +2,6 @@ package com.github.danny95djb.hashes;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
 
 public class MD5 implements IBloomHash {
 

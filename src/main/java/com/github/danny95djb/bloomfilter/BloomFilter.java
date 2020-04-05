@@ -23,6 +23,12 @@ public class BloomFilter {
         this.utils = new Utils();
     }
 
+    public BloomFilter(List<IBloomHash> bloomHashes) {
+        this.bitSet = new BitSet(160);
+        this.hashes = bloomHashes;
+        this.utils = new Utils();
+    }
+
     public void add(Object input) throws IOException {
         byte[] bytes = utils.convertToBytes(input);
         hashes.forEach(hash -> {
